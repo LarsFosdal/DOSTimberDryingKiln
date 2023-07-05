@@ -1,0 +1,800 @@
+
+ ˛ External Message Stream Compiler
+
+Reading message definition file: "P4RUN.MES"
+Checking for Redefined messages...
+Sourcefile errors detected: 0
+Checking for Missing/Illegal Help-references...
+Sourcefile errors detected: 0
+Writing target message TStream  : "P4RUN.MSG"
+Writing message reference list : "P4RUN.LST"
+
+
+ ˛ Prompt texts (Msg)
+
+'ACKKLNST'      " Oppstart, "
+'ADDRESS'       "Tel. 2268 1900   Fax. 2219 9700"
+'AIRSPEED'      "Lufthastighet :"
+'ATTIME'        "Tidspunkt "
+'BAKUPINT'      "Sikkerhetskopi :"
+'BARLIST'       "Temperaturoversikt"
+'BLANKINT'      "Skjermblanking :"
+'BLOWDEPTH'     "BlÜsedyp :"
+'CELSIUS'       "¯C"
+'CFGUNITS'      "enheter installert."
+'CHART1'        "[1..10] - dager    [+/-] - dager    [PgUp/PgDn] - Velg bilde"
+'CHART2'        "[PgUp/PgDn] - Velg bilde"
+'CHARTCMD'      "[PgUp/PgDn] - Bla i oversikt    [Tab ƒ≥] - Tõrkeoversikt"
+'CIRCVOL'       "Sirk. mengde :"
+'CMDPRESC'      "[ƒŸ] - Gi kommando    [P] - Utskrift    ESC - Tilbake"
+'COMPANY'       "ABB Alfsen og Gunderson"
+'CONDTIME'      "Kondisjoneringstid :"
+'CONTROL'       "Tõrkekontroll"
+'COOL-LIM'      "Avkjõling, max :"
+'COOLTIME'      "Avkjõlingstid :"
+'CUSTNAME'      "Kunde :"
+'DATAINT'       "Tabellintervall :"
+'DELTAHEAT'     "Delta t, oppv. :"
+'DENSITY'       "Tetthet :"
+'DENSMEAS'      "kg/m3"
+'DISTRIB'       "Kurvetype :"
+'DONETIME'      "Antatt ferdig :"
+'DRY-TEMP'      "Tõrr temperatur :"
+'DRYTIME'       "Tõrketid :"
+'ENTADR'        "Adresse :"
+'ENTAVAIL'      "Tilgjengelig :"
+'ENTERCHG'      "Enter - endre settpunkt"
+'ENTERESC'      "Enter-Bekreft   Esc-Retur"
+'ENTLOGGED'     "Logging :"
+'ENTMODE'       "Oppdatering :"
+'ENTNAME'       "Funksjon :"
+'ENTPRIO'       "Prioritet :"
+'EQUTIME'       "Tinetid :"
+'ESC=EXIT'      " F9-Bekreft  Esc-Avbryt "
+'ESC=LOGIN'     "Esc - Tilbake"
+'ESCPRINT'      "[P] - Utskrift    ESC - Tilbake"
+'EXITMSG'       "Trykk F9 for Ü slutte - ESC tilbake"
+'EXITNOW'       "Vil du virkelig avslutte ?"
+'F10RETURN'     "F10 - retur til parametere"
+'F10TABLE'      "  F10 - Tabelldata"
+'F1HELP'        "F1-Hjelp"
+'F2/F3'         "F2/F3 - Lagre/Hent"
+'F9/ESC'        " F9-Start    Esc-Avbryt "
+'FAULT'         "FEIL!"
+'FILENAME'      "Nytt filnavn :"
+'HEATTIME'      "Oppvarmingstid :"
+'HOURS'         "timer"
+'INSTINFO'      "Installasjon :"
+'INSTLIST'      "Installasjon"
+'INTENSITY'     "Intensitet :"
+'KERNAL'        "Kjernevedandel :"
+'KILNNAME'      "Navn :"
+'KLNLSTH1'      "                           Tre-  Dim.    Startet     Tõrke Kond Ferdig"
+'KLNLSTH2'      "Kammer     Tilstand        slag  b   t   Dato   Kl.   tid  tid  Dato   Kl."
+'LANADDR'       "LAN adresse :"
+'LANAVAIL'      "LAN support :"
+'LANGUAGE'      "TekstsprÜk :"
+'LANREMOTE'     "LAN styring :"
+'LISTCMD'       "[Tab ƒ≥] - Temperaturoversikt"
+'MATRCMD1'      "[PgUp/PgDn] - Bla i listen   [P] - Utskrift   [Esc] - Tilbake"
+'MATRCMD2'      "[F7] Ny Pakke   [F8] Last inn   [F9] Mat frem   [F10] Last ut"
+'MAX-DRY'       "Max T-tõrr :"
+'MAX-WET'       "Max T-vÜt :"
+'MAXERANK'      "Ant. venteranker :"
+'MAXTRANK'      "Ant. tunnelranker :"
+'MAXXRANK'      "Ant. ferdigranker :"
+'MDCTTBI'       "Bõr-verdi, t-tõrr :"
+'MDCTVEI'       "Er-verdi, t-vÜt :"
+'MDLCMNT'       "Kommentar :"
+'METER'         "m"
+'MILLIMET'      "mm"
+'MINUTES'       "min"
+'MODEMLNK'      "Modem :"
+'MOISTBEGIN'    "Startfuktighet :"
+'MOISTEND'      "Sluttfuktighet :"
+'MVERROR'       "˛  MOTORFEIL  ˛"
+'OOPS'          "Angre"
+'PACKEDIT1'     " Oppgi rankedata "
+'PARAMTITLE'    "Parametre: "
+'PERCENT'       "%"
+'PLCLNK'        "PLS-port"
+'PLCTYPE'       "PLS-modell :"
+'PRNTTYPE'      "Printer type :"
+'PRODIAG'       "Prosessdiagram: "
+'PRODIAG1'      "[Ordskiller] - Frisk opp bilde"
+'PROERROR'      "˛ PROSESSFEIL ˛"
+'PROGTITLE'     "Styresystem for trelasttõrke"
+'RANKLIST'      "Materialflyt"
+'RESUMING'      "Korrigerer tid og verdier for "
+'SER#'          "Port COMx :"
+'SERBPS'        "Hastighet :"
+'SERINS'        "Installert :"
+'SERPARITY'     "Paritet :"
+'SERSBITS'      "Stoppbit :"
+'SETIDEAL'      "Set:"
+'SETPOINT'      "Bõr:"
+'SETUP1'        "[F9] - Aksepter endringer"
+'SETUPMNU'      "Installasjon - Velg operasjon"
+'SPACER'        "Strõtykkelse :"
+'SPEEDMEAS'     "m/s"
+'STARTUP'       "Gjenoppstart av system"
+'STOP!'         "Stopp "
+'STOPNOW'       "Vil du virkelig stoppe ?"
+'TDC'           "Temp.diff, Kond. :"
+'TDS'           "Temp.diff, Start :"
+'TEXTLIST'      "Tõrkeoversikt"
+'THICKNESS'     "Tykkelse :"
+'TIMDATWIN'     "JustÇring av tid og dato"
+'TIMEINFO'      "tt.mm  dd/mm-ÜÜÜÜ"
+'TIMEUSAGE'     " Tõrketid "
+'TMPCHART'      "Tõrkeforlõp: "
+'TNLLSTH1'      "                                             T-vÜt 1       T-tõrr 1"
+'TNLLSTH2'      "Kanal      Tilstand        Kommentar         Bõr   Er      Bõr   Er"
+'TOTTIME'       "Oppholdstid :"
+'USERANK'       "Bruk rankeliste :"
+'VALUE'         " Er:"
+'VOLMEAS'       "kg/s"
+'WET-TEMP'      "VÜt temperatur :"
+'WIDTH'         "Bredde :"
+'WOODSORT'      "Treslag :"
+'YESNO'         " F9 - Ja   Esc - Nei "
+'ZONE#'         "Antall soner :"
+
+
+ ˛ Multiline texts (Txt)
+
+'ENTMODES'      (4 lines)
+                "Read"
+                "Write"
+                "Read/Write"
+                "Polled"
+
+'LANGSLCT'      (1 lines)
+                "Norsk"
+
+'PLCSLCT'       (7 lines)
+                "Modicon 484"
+                "Modicon 884"
+                "Mitsubishi F1"
+                "Telemechanique 14b"
+                "SattCon COMLI 01"
+                "Klîckner-M. IPC 620"
+                "Siemens 6b"
+
+'PRNTSLCT'      (2 lines)
+                "IBM Proprinter"
+                "Epson FX-80"
+
+'SERPARSLCT'    (3 lines)
+                "None"
+                "Even"
+                "Odd"
+
+'SMOOTHING'     (2 lines)
+                "Glattet"
+                "Trinnvis"
+
+'STATENAMES'    (9 lines)
+                "Stoppet"
+                "Oppvarming"
+                "Tining"
+                "Tõrking"
+                "Kondisjonering"
+                "Avkjõling"
+                "Ferdig !"
+                "Drift"
+                "PLS-styrt"
+
+'WOODTYPES'     (2 lines)
+                "Gran"
+                "Furu"
+
+'YESNOSLCT'     (2 lines)
+                "Ja"
+                "Nei"
+
+
+ ˛ Menu texts (Mnu)
+
+'INSTALMNU'     ""  (4 lines)
+                "Generell"
+                "Kammer"
+                "Utskrift"
+                "Avslutt"
+
+'KLNRUNMNU'     " Operasjon "  (5 lines)
+                "Angre"
+                "Se pÜ parametre"
+                "Tõrkeforlõp"
+                "Prosessdiagram"
+                "Stopp"
+
+'KLNSTPMNU'     " Oppstart "  (2 lines)
+                "Angre"
+                "Start"
+
+'LOGINMNU'      ""  (4 lines)
+                "Tõrkestyring"
+                "Tid og Dato"
+                "Installasjon"
+                "Avslutt"
+
+'MDLSLCT'       " Velg tõrkemodell "  (3 lines)
+                " Malmquist modell M1"
+                " Malmquist modell 3 "
+                " Egen modell "
+
+'TNLRUNMNU'     " Operasjon "  (5 lines)
+                "Angre"
+                "Endre parametre"
+                "Tõrkeforlõp"
+                "Prosessdiagram"
+                "Stopp"
+
+'TNLRUNMNU2'    " Operasjon "  (6 lines)
+                "Angre"
+                "Endre parametre"
+                "Tõrkeforlõp"
+                "Prosessdiagram"
+                "Materialliste"
+                "Stopp"
+
+'TNLSTPMNU'     " Oppstart "  (2 lines)
+                "Angre"
+                "Start"
+
+
+ ˛ Help texts (Hlp)
+
+'ABOUT?'        "Om AG's tretõrke"  (5 lines)
+                "Opprinnelig ble Styringsprogrammet utviklet og"
+                "kjõrt pÜ en DEC Rainbow under operativsystemet"
+                "CP/M.  I 1986 ble den fõrste PC-versjonen klar,"
+                "og det du ser nÜ er et resultat av nitidig og"
+                "fremtidsrettet arbeid."
+
+'BAKUPINT?'     "Backup intervall"  (1 lines)
+                "Tid i minutter mellom hver backup"
+
+'BARHLP?'       "Temperaturoversikt"  (7 lines)
+                "Viser stolpediagrammer for bõr og"
+                "Çr-verdier."
+                ""
+                "Kan evt. vises i listeform."
+                ""
+                "Velg mellom de to bildene med"
+                "tabulator-tasten."
+
+'BIOSERR'       "BIOS printer flagg"  (8 lines)
+                ""
+                "  ⁄ƒƒƒƒƒƒƒƒƒƒ Printer not busy"
+                "  ≥⁄ƒƒƒƒƒƒƒƒƒ Acknowledge"
+                "  ≥≥ ⁄ƒƒƒƒƒƒƒ Is selected (Online)"
+                "  11010xx0"
+                "    ≥ ≥  ¿ƒƒƒ TimeOut"
+                "    ≥ ¿ƒƒƒƒƒƒ I/O error"
+                "    ¿ƒƒƒƒƒƒƒƒ Out of paper"
+
+'BLANKINT?'     "Skjermblanking"  (2 lines)
+                "Tid i minutter fõr automatisk"
+                "skjermblanking trer i kraft"
+
+'CFGHLP?'       "Installerbare parametre"  (7 lines)
+                " Antall enheter installert"  Ref: CFGUNITS?
+                " TekstsprÜk pÜ skjermbilder"  Ref: LANGUAGE?
+                " Tid fõr automatisk Skjermblanking"  Ref: BLANKINT?
+                " Tid mellom hver Sikkerhetskopi"  Ref: BAKUPINT?
+                " Pls-modell"  Ref: PLCSLCT?
+                " PLS tilkopling"  Ref: PLCLNK?
+                " Modem tilkopling"  Ref: MODEMLNK?
+
+'CFGUNITS?'     "Installerte enheter"  (3 lines)
+                "Kan ikke endres i dette programmet, men"
+                "bestemmes ved fõrstegangs installasjon"
+                "av styringssystemet"
+
+'CHARTHLP?'     "Grafisk tõrkeforlõp"  (12 lines)
+                "Viser en grafisk oversikt over tõrkens"
+                "virkelige tõrkeforlõp"
+                ""
+                "Bestem tidsutsnitt med :"
+                ""
+                " [P]         Utskrift"
+                " Kammer:"
+                " [Tab]       Tv, Tt og Tv1,Tt1,Tt3"
+                "             eller Tv2,Tt2,Tt4"
+                " Kanaler:"
+                " [+]/[-]     flere/fërre dager"
+                " [1..9]/[0]  1..9 dager/10 dager (maks)"
+
+'CONDTIME?'     "Kondisjonering"  (5 lines)
+                "Under kondisjonering utjevnes fuktigheten"
+                "i trevirket.  Dette reduserer faren for"
+                "sprekkdannelser og vridning."
+                ""
+                "Tillatt tid : 0 - 72 timer"
+
+'COOLTIME?'     "Avkjõling"  (6 lines)
+                "Under avkjõling reduseres virkets"
+                "temperatur ned mot omgivelsestemp."
+                "Dette reduserer problemer med"
+                "riming o.l."
+                ""
+                "Tillatt tid : 0 - 12 timer"
+
+'DATAINT?'      "Data intervall"  (3 lines)
+                "Velg med hvilke mellomrom i tid du vil oppgi"
+                "punkter pÜ din egen tõrkemodell."
+                "Tillatt omrÜde : 1 - (Tõrketid/2) timer"
+
+'DELTAHEAT?'    "Grenseverdi"  (5 lines)
+                "Maksimal temperatur differanse"
+                "under oppvarming:"
+                ""
+                " ≥Ttõrr1-TvÜt1≥max ="
+                " delta t = 1 - 3 ¯C"
+
+'DENSITY?'      "Material-Tetthet"  (6 lines)
+                "Oppgi trevirkets tetthet"
+                ""
+                "Tettheten er med pÜ Ü beskrive mengden av"
+                "vann i virket."
+                ""
+                "Tettheten skal ligge fra 300 til 600 kg/m3"
+
+'DISTRIB?'      "Fordelingsmetode"  (6 lines)
+                "Velg pÜ hvilken mÜte egenmodellen skal"
+                ""beregnes" (G/T)."
+                "G)lattet"
+                " Trekker en rett linje mellom punktene dine"
+                "T)rinnvis"
+                " p1 til p2 = p1, p2 til p3 = p2, ...osv."
+
+'DOSERR'        "Noen DOS feilmeldinger"  (9 lines)
+                "Dette er de vanligste feil i forbindelse med printer"
+                "problemer under utskrift:"
+                ""
+                " 105 ≥ File not open for output"
+                " 159 ≥ Printer out of paper"
+                " 160 ≥ Device write fault"
+                " 162 ≥ Hardware failure"
+                ""
+                "For andre feil, konferer DOS manual evt. TP hÜndbok"
+
+'DRY-TEMP?'     "Settpunkt"  (3 lines)
+                "Tõrr temperatur settpunkt"
+                ""
+                " Ttõrr = 30 - 75 ¯C"
+
+'DRYPOINT?'     "Modellpunkt "Tõrr"-temperatur"  (1 lines)
+                "Tillatt omrÜde : 30.0 - 75.0 ¯C"
+
+'DRYTIME?'      "Tõrketid"  (2 lines)
+                "Skriv inn Tõrketiden."
+                "Tillatt omrÜde : 1 - 480 timer"
+
+'EDITKEY?'      "Redigeringssystemet"  (10 lines)
+                "Forflytning"
+                "  Et tegn, Venstre/Hõyre         /"
+                "  Et ord, Venstre/Hõyre          ^/^"
+                "  Begynnelsen av cellen          Home"
+                "  Slutten av cellen              End"
+                ""
+                "Redigering"
+                "  Overskriv pÜ/av                Ins/^V"
+                "  Slett tegnet under markõren    Del/^G"
+                "  Slett resten av ordet          ^T/^Del"
+
+'EMOIST?'       "Sluttfuktighet"  (3 lines)
+                "Skriv inn den õnskede fuktighet etter"
+                "fullfõrt tõrkeprosess."
+                "Tillatt omrÜde : 6 - 25 %"
+
+'ENTADR?'       "Adresse"  (3 lines)
+                "Register eller Coil adresse."
+                "Ansvaret for Ü gi riktige"
+                "adresser hviler pÜ operatõren."
+
+'ENTAVAIL?'     "Tilgjengelig ?"  (2 lines)
+                "Er registeret/coilen tilgjengelig"
+                "for bruk ?  (Installert ?)"
+
+'ENTLOGGED?'    "Logging ?"  (5 lines)
+                "Skal verdiene logges ?"
+                ""
+                "Det har pr. i dag ingen hensikt Ü"
+                "endre dette valget."
+                "Bõr derfor fÜ stÜ urõrt."
+
+'ENTNAME?'      "Funksjon"  (4 lines)
+                "Tekst som beskriver coilens"
+                "eller registerets funksjon."
+                "Har ingen betydning for den"
+                "virkelige funksjonen."
+
+'EQUTIME?'      "Tinetid"  (7 lines)
+                "For tining av frosset virke."
+                ""
+                "Skriv inn hvor lang tid kammeret skal "stÜ""
+                "fra oppvarmingen er ferdig og til tõrke-"
+                "prosessen skal startes."
+                ""
+                "Tillatt tid : 0 - 24 timer"
+
+'F9?'           "Avslutt inntasting"  (2 lines)
+                "F9 tasten avslutter innlegging av parametre"
+                "og starter beregningen."
+
+'GENHELP?'      "Kammeroversikt"  (2 lines)
+                ""
+                ""
+
+'HEATTIME?'     "Oppvarmingstid"  (6 lines)
+                "Den tiden kanalen skal bruke"
+                "pÜ oppvarming etter innlasting"
+                "av nytt virke"
+                ""
+                " Oppvarmings tid = 0 - 240 min"
+                "                  (0 - 4 timer)"
+
+'HELPHLP?'      "Hjelp til Hjelp"  (18 lines)
+                "Du kan forlate hjelpesystemet ved Ü trykke"
+                "Escape-tasten og du vil da returnere til det"
+                "sted du var i utgangspunktet."
+                ""
+                " Du kan kalle opp hjelpesystemet alle"
+                "  steder hvor "F1=Hjelp" stÜr i nederste"
+                "  hõyre hjõrne."
+                " Hjelpebildet vil inneholde opplysninger"
+                "  som gjelder for det sted i programmet du"
+                "  befant deg. Hvis du õnsker ytterligere"
+                "  opplysninger, kan du trykke F1-tasten igjen"
+                "  eller peke med piltastene pÜ det emne du"
+                "  õnsker, og trykke Enter."
+                ""
+                "Emner er uthevet pÜ samme mÜte som emnet"
+                ""oversikt":  Du kan fÜ en oversikt"  Ref: MAINHLP?
+                "over tilgjengelige hjelpe-emner hvis du"
+                "trykker pÜ Enter-tasten."
+
+'HOWSTART?'     "Start beregningen av modellen"  (6 lines)
+                "NÜr du har gjort de endringene du õnsket i"
+                "parameterlisten vil du ved Ü trykke pÜ"
+                "F9-tasten, starte beregningen av modellen."
+                "Etter at beregningen er fullfõrt (eller"
+                "avbrutt) vil du fÜ opp en meny med flere"
+                "valgmuligheter."
+
+'INTENS?'       "Intensitet"  (5 lines)
+                "Skriv inn den õnskede tõrkeintensitetsfaktor"
+                "Jo hõyere faktor desto hardere tõrking og"
+                "kortere tõrketid."
+                ""
+                "Tillatt omrÜde : 1.15 - 1.45"
+
+'KERNAL?'       "Kjernevedandel"  (3 lines)
+                "Skriv inn antatt kjernevedandel"
+                ""
+                "Tillatt omrÜde : 0 - 100%"
+
+'KILNNAME?'     "Tõrke-navn"  (6 lines)
+                "Oppgi navn pÜ tõrken:"
+                ""
+                "F.eks."
+                "        Kanal 1"
+                "        Kammer 3"
+                "        etc."
+
+'KILNVU?'       "OvervÜking av tõrke"  (8 lines)
+                "Det finnes flere muligheter for Ü"
+                "fÜ informasjon om kammeret:"
+                ""
+                "  Temperaturoversikt"  Ref: BARHLP?
+                "  Prosessdiagram"  Ref: PRODIAGHLP?
+                "  Grafisk tõrkeforlõp"  Ref: CHARTHLP?
+                "  Parametre"  Ref: PARTNL?
+                "  Stopp kammeret"  Ref: STPKILN?
+
+'KRMNUHLP?'     "Operasjon"  (5 lines)
+                "Angre - gÜ tilbake"
+                "Se pÜ parametre"
+                "Tõrkeforlõp"
+                "Prosessdiagram"
+                "Stopp kammeret"
+
+'KSMNUHLP?'     "Start Kammer"  (3 lines)
+                "Angre - gÜ tilbake"
+                "Start - oppgi tõrkeparametre"  Ref: PARMOD3?
+                "        og evt. utfõr start."
+
+'LANADDR?'      "LAN adresse"  (4 lines)
+                "Oppgi 16 tegns nodenavn for"
+                "adressering i nettverket"
+                ""
+                "Ikke implementert i denne versjon"
+
+'LANAVAIL?'     "CFGHLP?"  (5 lines)
+                "Er lokalnett installert ?"
+                "Stõtter alle NetBIOS kompatible"
+                "nettverk."
+                ""
+                "Ikke implementert i denne versjon"
+
+'LANGUAGE?'     "SprÜk"  (5 lines)
+                "Velg hvilket sprÜk, menyer og"
+                "andre tekster skal benytte."
+                ""
+                "Dette valget har ingen effekt i"
+                "denne versjon av programmet."
+
+'LANREMOTE?'    "LAN fjernstyring"  (4 lines)
+                "Skal tõrka kunne fjernstyres"
+                "via lokalnett ?"
+                ""
+                "Ikke implementert i denne versjon"
+
+'MAINHLP?'      "Oversikt over hjelpeemner"  (9 lines)
+                " Velg et emne med piltastene og trykk Enter:"
+                ""
+                "  Tõrkeoversikt"  Ref: KILNVU?
+                "  Sett Tid og Dato"  Ref: TIMESET?
+                "  Installering"  Ref: CFGHLP?
+                "  Avslutt"  Ref: QUITPRG?
+                "  Hjelp til Hjelp"  Ref: HELPHLP?
+                "  Redigeringstaster"  Ref: EDITKEY?
+                "  Reklame !"  Ref: ABOUT?
+
+'MAXERANK?'     "Ant. venteranker"  (2 lines)
+                "Antall ranker pÜ matesiden av tunnelen"
+                "Fra null til ti ranker tillatt"
+
+'MAXTRANK?'     "Ant. tunnellranker"  (2 lines)
+                "Antall ranker inne i tunnelen"
+                "Fra null til femti ranker tillatt"
+
+'MAXXRANK?'     "Ant. ferdigranker"  (2 lines)
+                "Antall ranker ved utgang av tunnelen"
+                "Fra null til ti ranker tillatt"
+
+'MDLCMNT?'      "Kommentar"  (7 lines)
+                "Et kommentarfelt som kan brukes"
+                "fritt, f.eks. til Ü beskrive"
+                "hva som ligger i kanalen."
+                ""
+                "Eks."
+                "  Gran 150x50 mm"
+                "  Furu 120x70 mm"
+
+'MNUSYS?'       "Menysystemet"  (15 lines)
+                " Forflytning i menyen :"
+                "  Linje opp/ned           /"
+                "  Side opp/ned            PgUp/PgDn"
+                "  Topp/bunn av menyside   Home/End"
+                "  Topp/bunn av meny       ^Home/^End"
+                "  Du kan sõke pÜ fõrste tegn i en menylinje"
+                "  ved Ü taste inn dette tegnet.  Hvis det"
+                "  er flere linjer som begynner pÜ det samme"
+                "  tegnet, vil du hoppe videre til disse med"
+                "  et nytt trykk."
+                " Bekreft valg med Enter-tast eller forlat"
+                "  menyen med Escape-tasten (ESC)."
+                "  Hvis hjelp er tilgjengelig kan du fÜ litt"
+                "  mer informasjon om de forskjellige meny-"
+                "  opsjonene ved Ü trykke pÜ F1-tasten."
+
+'MODEMLNK?'     "Modem port"  (4 lines)
+                "Seriell port mot modem tillater"
+                "fjernoppkopling mot programmet"
+                ""
+                "Ikke implementert i denne versjon"
+
+'NOHELP?'       "Ingen hjelp foreligger"  (6 lines)
+                "Heisann, du har avdekket et problem i"
+                "hjelpesystemet!"
+                ""
+                "NotÇr deg hvor/hvordan du fikk denne"
+                "meldingen og kontakt oss slik at vi"
+                "kan fÜ registrert mangelen !"
+
+'PARCHG?'       "Forandre parametre"  (4 lines)
+                "GÜr tilbake til parameter innleggingen slik"
+                "at du kan endre modellen.  Hvis du ikke er"
+                "fornõyd med de data du har lagt inn, kan du"
+                "gÜ tilbake for Ü gjõre endringer."
+
+'PARMDC?'       "MDC Parametre"  (0 lines)
+
+'PARMOD3?'      "Modell Parametre"  (8 lines)
+                "  Materiale: Treslag      Tykkelse"  Ref: WOODSRT? THICK?
+                "             Bredde       Tetthet"  Ref: WIDTH? DENSITY?
+                " Temperatur: t-vÜt"  Ref: TWET?
+                "             Start.Diff.  Kond.diff."  Ref: TDS? TDC?
+                "  Fuktighet: Start        Slutt"  Ref: SMOIST? EMOIST?
+                "        Tid: Tining       Kondisjonering"  Ref: EQUTIME? CONDTIME?
+                "             Avkjõling"  Ref: COOLTIME?
+                "      Annet: Intensitet   Kjernevedandel"  Ref: INTENS? KERNAL?
+
+'PARTNL?'       "Kanalparametre"  (5 lines)
+                "  Temperatur: t-vÜt"  Ref: WET-TEMP?
+                "              t-tõrr"  Ref: DRY-TEMP?
+                "              delta t"  Ref: DELTAHEAT?
+                "  Oppv.tid  : Oppvarmingstid"  Ref: HEATTIME?
+                "  Kommentar : Tekstfelt"  Ref: MDLCMNT?
+
+'PLCLNK?'       "PLS port"  (2 lines)
+                "Seriellporten mot PLS tillater"
+                "PC'en Ü kommunisere med PLS'en"
+
+'PLCSLCT?'      "PLS Type"  (6 lines)
+                " Gould Modicon 484 og 884"
+                "  (RTU-mode)"
+                " Mitsubishi Melsec F1 og F2"
+                " Klîckner-Moeller IPC 620-12/14/16"
+                "  (Modbus RTU protokoll)"
+                " Sattcon og Telemechanique PLS'er"
+
+'PRGKILN?'      "Programmering av Kammer"  (5 lines)
+                "Etter Ü trykket F9-tasten utfõres en beregning"
+                "av tõrkemodellen fõr du fÜr frem denne menyen:"
+                ""
+                "  Forandre parametre"  Ref: PARCHG?
+                "  Start Kammeret"  Ref: STARTIT?
+
+'PRNTTYPE?'     "Skrivertype"  (2 lines)
+                "0 - IBM Graphics komp."
+                "1 - Epson FX kompatibel"
+
+'PRODIAGHLP?'   "Prosessdiagram"  (9 lines)
+                "Viser et tilstandsdiagram for"
+                "tõrka.  Du finner:"
+                ""
+                "  Temperaturer"
+                "  Spjell/ventil - posisjoner"
+                "  Vifte og Pumpe tilstand"
+                ""
+                "  [Ordskiller] frisker opp"
+                "  bildet, og [P] skriver ut."
+
+'QUITPRG?'      "Avslutt"  (5 lines)
+                "Avslutte styringsprogrammet ?"
+                ""
+                "MÜ bekreftes fõr man gÜr ut."
+                "Alle data lagres, og hentes"
+                "inn igjen ved oppstart."
+
+'RUNKILN?'      "Oppstart av kammer"  (3 lines)
+                "Et kammer kan startes pÜ flere mÜter, enten"
+                "med den parametriserte Malmquist modellen"  Ref: RUNMOD3?
+                "eller med en egendefinert modell"  Ref: RUNMDC?
+
+'RUNMDC?'       "Egen Modell"  (4 lines)
+                "Definer egen tõrkemodell (evt. hent inn"  Ref: PARMDC?
+                "en du har lagret tidligere) og kjõr kammeret"
+                "etter denne modellen."
+                "Godt egnet for spesielle tõrkekrav."
+
+'RUNMOD3?'      "Modell 3"  (4 lines)
+                "Beregn tõrkeforlõp etter Malmquist's matematiske"
+                "tõrkemodell nr.3 med tõrkeparametre gitt"  Ref: PARMOD3?
+                "av deg.  Modellen skal gi optimal tõrking i"
+                "lõpet av kortest mulig tid."
+
+'SERINS?'       "Serieport"  (8 lines)
+                ""
+                "Installert : Ja/Nei"
+                " Port COMx : COM1/COM2"
+                " Hastighet : 300..19200 bps"
+                "  Stoppbit : 1/2"
+                "   Paritet : None/Even/Odd"
+                ""
+                "Se PLS port og Modem port"  Ref: PLCLNK? MODEMLNK?
+
+'SETDAY?'       "Dag"  (2 lines)
+                "Skriv inn dag (1..2 siffer)."
+                "Tillatt omrÜde : 1 - 31"
+
+'SETHOUR?'      "Time"  (2 lines)
+                "Skriv inn time (24 timers ur  1..2 siffer)."
+                "Tillatt omrÜde : 0 - 23"
+
+'SETMIN?'       "Minutt"  (2 lines)
+                "Skriv inn minutt (1..2 siffer)."
+                "Tillatt omrÜde : 0 - 59"
+
+'SETMNTH?'      "MÜned"  (2 lines)
+                "Skriv inn mÜned (1..2 siffer)."
+                "Det er naturligvis 12 mÜneder i et Ür."
+
+'SETYEAR?'      "èrstall"  (2 lines)
+                "Skriv inn Ürstall (4 siffer)."
+                "Tillatt omrÜde : 1988 - 2049"
+
+'SMOIST?'       "Startfuktighet"  (3 lines)
+                "Skriv inn hvilken fuktighet trevirket har"
+                "i utgangspunktet."
+                "Tillatt omrÜde : 15 - 130 %"
+
+'STARTIT?'      "Start Kammeret"  (3 lines)
+                "Dette menyvalget vil starte kammeret med den"
+                "tõrkemodellen du akkurat"
+                "har definert."
+
+'STPKILN?'      "Stopp tõrken"  (1 lines)
+                "Stopp kanalen hvis den er i drift."
+
+'TDC?'          "Temp.diff.kond"  (4 lines)
+                "Skriv inn õnsket temperaturdifferanse under"
+                "kondisjoneringstiden."
+                ""
+                "Tillatt omrÜde : 1.0 - 20.0 ¯C"
+
+'TDS?'          "Temp.diff.start"  (6 lines)
+                "Skriv inn õnsket start temperatur-differanse"
+                "under tõrketiden."
+                "Jo stõrre temperatur-differanse, desto"
+                "hardere tõrking.  Se ogsÜ vÜt-temperatur."  Ref: TWET?
+                ""
+                "Tillatt omrÜde : 0.0 - 2.5 ¯C"
+
+'THICK?'        "Material-Tykkelse"  (2 lines)
+                "Skriv inn Tykkelse."
+                "Tillatt omrÜde : 12 - 150 mm"
+
+'TIMESET?'      "Sett Tid og Dato"  (5 lines)
+                "Her kan du sette riktig dato og klokkeslett"
+                "for systemet hvis hva som vises ikke er riktig."
+                "Tast inn õnsket dato / tid og trykk F9 tasten"
+                "for Ü akseptere de nye verdiene."
+                "  Time,Minutt,Dag,MÜned,èr"  Ref: SETHOUR? SETMIN? SETDAY? SETMNTH? SETYEAR?
+
+'TRMNUHLP?'     "Operasjon"  (5 lines)
+                "Angre - gÜ tilbake"
+                "Se pÜ/endre parametre"  Ref: PARTNL?
+                "Tõrkeforlõp"  Ref: CHARTHLP?
+                "Prosessdiagram"  Ref: PRODIAGHLP?
+                "Stopp kanalen"  Ref: STPKILN?
+
+'TSMNUHLP?'     "Start Kanal"  (3 lines)
+                "Angre - gÜ tilbake"
+                "Start - oppgi tõrkeparametre"  Ref: PARTNL?
+                "        og evt. utfõr start."
+
+'TWET?'         "t-vÜt"  (5 lines)
+                "Skriv inn õnsket "vÜt" temperatur under"
+                "tõrkeprosessen.  Bestemmer sammen med"
+                "temp.diff hvor hard tõrkingen blir."  Ref: TDS?
+                ""
+                "Tillatt omrÜde : 30.0 - 55.0 ¯C"
+
+'USERANK?'      "Bruk rankeliste"  (2 lines)
+                "Skal rankeliste brukes ?"
+                "Rankelisten er en materialflyt oversikt"
+
+'WET-TEMP?'     "Settpunkt"  (3 lines)
+                "VÜt temperatur settpunkt"
+                ""
+                " TvÜt = 30 - 75 ¯C"
+
+'WETPOINT?'     "Modellpunkt "VÜt"-temperatur"  (1 lines)
+                "Tillatt omrÜde : 30.0 - 50.0 ¯C"
+
+'WIDTH?'        "Material-Bredde"  (2 lines)
+                "Skriv inn Bredde."
+                "Tillatt omrÜde : 50 - 300 mm"
+
+'WOODSRT?'      "Treslag"  (4 lines)
+                "Trykk F for Furu eller G for Gran."
+                "Treslaget har ingen betydning for styringen,"
+                "men finnes for at du skal ha bedre oversikt"
+                "over hva du tõrker."
+
+'ZONE#?'        "Antall soner"  (7 lines)
+                "Oppgi hvor mange soner kanalen"
+                "er delt inn i:"
+                ""
+                "Fra en til tre soner, normalt to."
+                ""
+                "Dette valget har ingen effekt i"
+                "denne versjon av programmet."
+
+ ˛ End

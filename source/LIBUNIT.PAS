@@ -1,0 +1,13 @@
+UNIT LibUnit;
+
+INTERFACE
+CONST
+  LibName = 'UTVENDIG';
+
+FUNCTION GoDoIt(Num:Integer):String;
+
+IMPLEMENTATION
+
+FUNCTION GoDoIt; EXTERNAL LibName INDEX 1;
+
+END.

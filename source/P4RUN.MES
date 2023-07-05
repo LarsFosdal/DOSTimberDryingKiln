@@ -1,0 +1,974 @@
+; External message def.
+; P3RUN - Norwegian texts
+; Revision  By        Changes
+; 910726    L.Fosdal  Initial preparation
+; 9108xx    L.Fosdal  Misc. changes
+; 911002    L.Fosdal  Added tunnel texts, cleaned up
+
+;--- Menus ------------------------------------------
+
+;Setter inn Tõrkekontroll (CONTROL) pÜ linje 2 hvis P4RUN.INI finnes
+@MENU LoginMnu MainHlp? ||
+|Tõrkestyring
+|Tid og Dato
+|Installasjon
+|Avslutt
+@END
+
+@MENU InstalMnu CfgHlp? ||
+|Generell
+|Kammer
+|Utskrift
+|Avslutt
+@END
+
+@MENU KLNSTPMNU KSMnuHlp? | Oppstart |
+|Angre
+|Start
+@END
+
+@HLP KSMnuHlp? MainHlp? |Start Kammer|
+|Angre - gÜ tilbake
+|Start - oppgi @{ParMod3? |tõrkeparametre|}
+|        og evt. utfõr start.
+@END
+
+@MENU KLNRUNMNU KRMnuHlp? | Operasjon |
+|Angre
+|Se pÜ parametre
+|Tõrkeforlõp
+|Prosessdiagram
+|Stopp
+@END
+
+@HLP KRMnuHlp? MainHlp? |Operasjon|
+|Angre - gÜ tilbake
+|Se pÜ parametre
+|Tõrkeforlõp
+|Prosessdiagram
+|Stopp kammeret
+@END
+
+@MENU TNLSTPMNU TSMnuHlp? | Oppstart |
+|Angre
+|Start
+@END
+
+@HLP TSMnuHlp? MainHlp? |Start Kanal|
+|Angre - gÜ tilbake
+|Start - oppgi @{ParTNL? |tõrkeparametre|}
+|        og evt. utfõr start.
+@END
+
+@MENU TNLRUNMNU TRMnuHlp? | Operasjon |
+|Angre
+|Endre parametre
+|Tõrkeforlõp
+|Prosessdiagram
+|Stopp
+@END
+
+@MENU TNLRUNMNU2 TRMnuHlp? | Operasjon |
+|Angre
+|Endre parametre
+|Tõrkeforlõp
+|Prosessdiagram
+|Materialliste
+|Stopp
+@END
+
+@HLP TRMnuHlp? MainHlp? |Operasjon|
+|Angre - gÜ tilbake
+|Se pÜ/endre @{ParTnl? |parametre|}
+|@{ChartHlp? |Tõrkeforlõp|}
+|@{ProDiagHlp? |Prosessdiagram|}
+|@{STPKiln? |Stopp|} kanalen
+@END
+
+@MENU MDLSLCT MDLSLCT? | Velg tõrkemodell |
+| Malmquist modell M1|
+| Malmquist modell 3 |
+| Egen modell |
+@END
+
+
+;--- Selection texts -------------------------
+
+@TXT SerParSlct
+|None
+|Even
+|Odd
+@END
+
+@TXT YesNoSlct
+|Ja
+|Nei
+@END
+
+@TXT ENTMODES
+|Read
+|Write
+|Read/Write
+|Polled
+@END
+
+@TXT PLCSLCT
+|Modicon 484
+|Modicon 884
+|Mitsubishi F1
+|Telemechanique 14b
+|SattCon COMLI 01
+|Klîckner-M. IPC 620
+|Siemens 6b
+@END
+
+@TXT LANGSLCT
+|Norsk
+@END
+
+@TXT PRNTSLCT
+|IBM Proprinter
+|Epson FX-80
+@END
+
+@TXT StateNames
+|Stoppet
+|Oppvarming
+|Tining
+|Tõrking
+|Kondisjonering
+|Avkjõling
+|Ferdig !
+|Drift
+|PLS-styrt
+@END
+
+@TXT WoodTypes
+|Gran
+|Furu
+@END
+
+@TXT Smoothing
+|Glattet
+|Trinnvis
+@END
+
+;--- Prompts ---------------------------------
+
+@PROMPTS
+PARAMTITLE|Parametre: |
+PRODIAG   |Prosessdiagram: |
+TMPCHART  |Tõrkeforlõp: |
+PACKEDIT1 | Oppgi rankedata |
+INSTLIST  |Installasjon
+TIMDATWIN |JustÇring av tid og dato
+TIMEINFO  |tt.mm  dd/mm-ÜÜÜÜ|
+TEXTLIST  |Tõrkeoversikt
+CONTROL   |Tõrkekontroll
+BARLIST   |Temperaturoversikt
+CFGUNITS  |enheter installert.
+LANGUAGE  |TekstsprÜk :
+BLANKINT  |Skjermblanking :
+BAKUPINT  |Sikkerhetskopi :
+PLCTYPE   |PLS-modell :
+PLCLNK    |PLS-port
+MODEMLNK  |Modem :
+SERINS    |Installert :
+SER#      |Port COMx :
+SERBPS    |Hastighet :
+SERSBITS  |Stoppbit :
+SERPARITY |Paritet :
+PRNTTYPE  |Printer type :
+LANAVAIL  |LAN support :
+LANREMOTE |LAN styring :
+LANADDR   |LAN adresse :
+CUSTNAME  |Kunde :
+INSTINFO  |Installasjon :
+FILENAME  |Nytt filnavn :
+KILNNAME  |Navn :
+ENTNAME   |Funksjon :
+ENTADR    |Adresse :
+ENTAVAIL  |Tilgjengelig :
+ENTLOGGED |Logging :
+ENTMODE   |Oppdatering :
+ENTPRIO   |Prioritet :
+COOL-LIM  |Avkjõling, max :
+CIRCVOL   |Sirk. mengde :
+AIRSPEED  |Lufthastighet :
+SPACER    |Strõtykkelse :
+BLOWDEPTH |BlÜsedyp :
+ZONE#     |Antall soner :
+USERANK   |Bruk rankeliste :
+MAXERANK  |Ant. venteranker :
+MAXTRANK  |Ant. tunnelranker :
+MAXXRANK  |Ant. ferdigranker :
+RANKLIST  |Materialflyt
+WET-TEMP  |VÜt temperatur :
+MAX-WET   |Max T-vÜt :
+DRY-TEMP  |Tõrr temperatur :
+MAX-DRY   |Max T-tõrr :
+DELTAHEAT |Delta t, oppv. :
+HEATTIME  |Oppvarmingstid :
+DATAINT   |Tabellintervall :
+DISTRIB   |Kurvetype :
+MDLCMNT   |Kommentar :
+ATTIME    |Tidspunkt |
+PROERROR  |˛ PROSESSFEIL ˛
+MVERROR   |˛  MOTORFEIL  ˛
+FAULT     |FEIL!
+;--- Miscellanous ----------------------------
+CELSIUS   |@#248C|                           Celsius temperature
+SPEEDMEAS |m/s
+VOLMEAS   |kg/s
+MILLIMET  |mm
+METER     |m
+DENSMEAS  |kg/m3
+PERCENT   |%
+MINUTES   |min
+HOURS     |timer
+SETIDEAL  |Set:|
+SETPOINT  |Bõr:|
+VALUE     | Er:|
+OOPS      |Angre
+STARTUP   |Gjenoppstart av system
+RESUMING  |Korrigerer tid og verdier for |
+F1HELP    |F1-Hjelp
+LISTCMD   |[Tab ƒ@#16≥] - Temperaturoversikt
+CHARTCMD  |[PgUp/PgDn] - Bla i oversikt    [Tab ƒ@#16≥] - Tõrkeoversikt
+MATRCMD1  |[PgUp/PgDn] - Bla i listen   [P] - Utskrift   [Esc] - Tilbake
+MATRCMD2  |[F7] Ny Pakke   [F8] Last inn   [F9] Mat frem   [F10] Last ut
+CHART1    |[1..10] - dager    [+/-] - dager    [PgUp/PgDn] - Velg bilde
+CHART2    |[PgUp/PgDn] - Velg bilde
+SETUP1    |[F9] - Aksepter endringer
+PRODIAG1  |[Ordskiller] - Frisk opp bilde
+SETUPMNU  |Installasjon - Velg operasjon
+CMDPRESC  |[@#17ƒŸ] - Gi kommando    [P] - Utskrift    ESC - Tilbake
+ESC=EXIT  | F9-Bekreft  Esc-Avbryt |
+ENTERESC  |Enter-Bekreft   Esc-Retur|
+ENTERCHG  |Enter - endre settpunkt|
+F10RETURN |F10 - retur til parametere|
+F2/F3     |F2/F3 - Lagre/Hent|
+F10TABLE  |  F10 - Tabelldata|
+ACKKLNST  | Oppstart, |
+TIMEUSAGE | Tõrketid |
+F9/ESC    | F9-Start    Esc-Avbryt |
+YESNO     | F9 - Ja   Esc - Nei |
+ESC=LOGIN |Esc - Tilbake
+ESCPRINT  |[P] - Utskrift    ESC - Tilbake
+EXITMSG   |Trykk F9 for Ü slutte - ESC tilbake
+EXITNOW   |Vil du virkelig avslutte ?
+STOP!     |Stopp |
+STOPNOW   |Vil du virkelig stoppe ?
+PROGTITLE |Styresystem for trelasttõrke
+COMPANY   |ABB Alfsen og Gunderson|          Name of company
+ADDRESS   |Tel. 2268 1900   Fax. 2219 9700
+;--- Kiln related --------------------------------------------------
+KLNLSTH1  |                           Tre-  Dim.    Startet     Tõrke Kond Ferdig|
+KLNLSTH2  |Kammer     Tilstand        slag  b   t   Dato   Kl.   tid  tid  Dato   Kl.|
+;          Navn______ Kondisjonering  Gran xxx xxx  dd/mm tt.mm  xxx  xxx  dd/mm tt.mm
+;-- Lengde 123456789a123456789b123456789c123456789d123456789e123456789f123456789g1234567890
+TNLLSTH1  |                                             T-vÜt 1       T-tõrr 1|
+TNLLSTH2  |Kanal      Tilstand        Kommentar         Bõr   Er      Bõr   Er|
+;          Navn______ Kondisjonering  Gran 150x50 mm   xx.x  xx.x    xx.x  xx.x  FEIL!
+;          1234567890 12345678901234  123456789012345
+THICKNESS |Tykkelse :
+WIDTH     |Bredde :
+DENSITY   |Tetthet :
+EQUTIME   |Tinetid :
+DRYTIME   |Tõrketid :
+WOODSORT  |Treslag :
+CONDTIME  |Kondisjoneringstid :
+COOLTIME  |Avkjõlingstid :
+TOTTIME   |Oppholdstid :
+DONETIME  |Antatt ferdig :
+TDS       |Temp.diff, Start :
+TDC       |Temp.diff, Kond. :
+MOISTBEGIN|Startfuktighet :
+MOISTEND  |Sluttfuktighet :
+INTENSITY |Intensitet :
+KERNAL    |Kjernevedandel :
+MDCTTBI   |Bõr-verdi, t-tõrr :
+MDCTVEI   |Er-verdi, t-vÜt :
+@END
+
+;----------------------------------------------------------------
+; Generelle hjelpetekster
+;----------------------------------------------------------------
+@BUFFER Disk
+@HLP HelpHlp? |Hjelp til Hjelp|
+|Du kan forlate hjelpesystemet ved Ü trykke
+|Escape-tasten og du vil da returnere til det
+|sted du var i utgangspunktet.
+|
+|@#7 Du kan kalle opp hjelpesystemet alle
+|  steder hvor "F1=Hjelp" stÜr i nederste
+|  hõyre hjõrne.
+|@#7 Hjelpebildet vil inneholde opplysninger
+|  som gjelder for det sted i programmet du
+|  befant deg. Hvis du õnsker ytterligere
+|  opplysninger, kan du trykke F1-tasten igjen
+|  eller peke med piltastene pÜ det emne du
+|  õnsker, og trykke Enter.
+|
+|Emner er uthevet pÜ samme mÜte som emnet
+|"oversikt":  Du kan fÜ en @{MainHlp? |oversikt|}
+|over tilgjengelige hjelpe-emner hvis du
+|trykker pÜ Enter-tasten.
+@END
+
+@HLP MainHlp? HelpHlp? |Oversikt over hjelpeemner|
+| Velg et emne med piltastene og trykk Enter:
+|
+|  @{KilnVu?     |Tõrkeoversikt|}
+|  @{TimeSet?    |Sett Tid og Dato|}
+|  @{CfgHlp?     |Installering|}
+|  @{QuitPrg?    |Avslutt|}
+|  @{HelpHlp?    |Hjelp til Hjelp|}
+|  @{EditKey?    |Redigeringstaster|}
+|  @{About?      |Reklame !|}
+@END
+
+@HLP MnuSys? |Menysystemet|
+|@#7 Forflytning i menyen :
+|  Linje opp/ned           @#24/@#25
+|  Side opp/ned            PgUp/PgDn
+|  Topp/bunn av menyside   Home/End
+|  Topp/bunn av meny       ^Home/^End
+|  Du kan sõke pÜ fõrste tegn i en menylinje
+|  ved Ü taste inn dette tegnet.  Hvis det
+|  er flere linjer som begynner pÜ det samme
+|  tegnet, vil du hoppe videre til disse med
+|  et nytt trykk.
+|@#7 Bekreft valg med Enter-tast eller forlat
+|  menyen med Escape-tasten (ESC).
+|@#7  Hvis hjelp er tilgjengelig kan du fÜ litt
+|  mer informasjon om de forskjellige meny-
+|  opsjonene ved Ü trykke pÜ F1-tasten.
+@END
+
+@HLP EditKey? |Redigeringssystemet|
+|Forflytning
+|  Et tegn, Venstre/Hõyre         @#27/@#26
+|  Et ord, Venstre/Hõyre          ^@#27/^@#26
+|  Begynnelsen av cellen          Home
+|  Slutten av cellen              End
+|
+|Redigering
+|  Overskriv pÜ/av                Ins/^V
+|  Slett tegnet under markõren    Del/^G
+|  Slett resten av ordet          ^T/^Del
+@END
+
+@HLP NoHelp? |Ingen hjelp foreligger|
+|Heisann, du har avdekket et problem i
+|hjelpesystemet!
+|
+|NotÇr deg hvor/hvordan du fikk denne
+|meldingen og kontakt oss slik at vi
+|kan fÜ registrert mangelen !
+@END
+
+@HLP About? |Om AG's tretõrke|
+|Opprinnelig ble Styringsprogrammet utviklet og
+|kjõrt pÜ en DEC Rainbow under operativsystemet
+|CP/M.  I 1986 ble den fõrste PC-versjonen klar,
+|og det du ser nÜ er et resultat av nitidig og
+|fremtidsrettet arbeid.
+@END
+
+@HLP DOSerr MainHlp? |Noen DOS feilmeldinger|
+|Dette er de vanligste feil i forbindelse med printer
+|problemer under utskrift:
+|
+| 105 ≥ File not open for output
+| 159 ≥ Printer out of paper
+| 160 ≥ Device write fault
+| 162 ≥ Hardware failure
+|
+|For andre feil, konferer DOS manual evt. TP hÜndbok
+@END
+
+@HLP BIOSerr MainHlp? |BIOS printer flagg|
+|
+|  ⁄ƒƒƒƒƒƒƒƒƒƒ Printer not busy
+|  ≥⁄ƒƒƒƒƒƒƒƒƒ Acknowledge
+|  ≥≥ ⁄ƒƒƒƒƒƒƒ Is selected (Online)
+|  11010xx0
+|    ≥ ≥  ¿ƒƒƒ TimeOut
+|    ≥ ¿ƒƒƒƒƒƒ I/O error
+|    ¿ƒƒƒƒƒƒƒƒ Out of paper
+@END
+;----------------------------------------------------------------
+; Hjelpetekster for Oppstartsmenyen
+;----------------------------------------------------------------
+
+@HLP RunKiln? MainHlp? |Oppstart av kammer|
+|Et kammer kan startes pÜ flere mÜter, enten
+|med den parametriserte @{RunMod3?|Malmquist|} modellen
+|eller med en @{RunMDC?|egendefinert|} modell
+@END
+
+@HLP RunMod3? RunKiln? |Modell 3|
+|Beregn tõrkeforlõp etter Malmquist's matematiske
+|tõrkemodell nr.3 med @{ParMod3?|tõrkeparametre|} gitt
+|av deg.  Modellen skal gi optimal tõrking i
+|lõpet av kortest mulig tid.
+@END
+
+@HLP RunMDC? RunKiln? |Egen Modell|
+|Definer egen @{ParMDC?|tõrkemodell|} (evt. hent inn
+|en du har lagret tidligere) og kjõr kammeret
+|etter denne modellen.
+|Godt egnet for spesielle tõrkekrav.
+@END
+
+
+;----------------------------------------------------------------
+; Hjelpetekster for Meny OvervÜking av tõrke
+;----------------------------------------------------------------
+@HLP KilnVu? MainHlp? |OvervÜking av tõrke|
+|Det finnes flere muligheter for Ü
+|fÜ informasjon om kammeret:
+|
+|  @{BarHlp?     |Temperaturoversikt|}
+|  @{ProDiagHlp? |Prosessdiagram|}
+|  @{ChartHlp?   |Grafisk tõrkeforlõp|}
+|  @{ParTnl?     |Parametre|}
+|  @{StpKiln?    |Stopp kammeret|}
+@END
+
+@HLP BarHlp? KilnVu? |Temperaturoversikt|
+|Viser stolpediagrammer for bõr og
+|Çr-verdier.
+|
+|Kan evt. vises i listeform.
+|
+|Velg mellom de to bildene med
+|tabulator-tasten.
+@END
+
+@HLP ChartHlp? KilnVu? |Grafisk tõrkeforlõp|
+|Viser en grafisk oversikt over tõrkens
+|virkelige tõrkeforlõp
+|
+|Bestem tidsutsnitt med :
+|
+| [P]         Utskrift
+| Kammer:
+| [Tab]       Tv, Tt og Tv1,Tt1,Tt3
+|             eller Tv2,Tt2,Tt4
+| Kanaler:
+| [+]/[-]     flere/fërre dager
+| [1..9]/[0]  1..9 dager/10 dager (maks)
+@END
+
+@HLP ProDiagHlp? KilnVu? |Prosessdiagram|
+|Viser et tilstandsdiagram for
+|tõrka.  Du finner:
+|
+|  Temperaturer
+|  Spjell/ventil - posisjoner
+|  Vifte og Pumpe tilstand
+|
+|  [Ordskiller] frisker opp
+|  bildet, og [P] skriver ut.
+@END
+
+@HLP StpKiln? KilnVu? |Stopp tõrken|
+|Stopp kanalen hvis den er i drift.
+@END
+
+@HLP QuitPrg? MainHlp? |Avslutt|
+|Avslutte styringsprogrammet ?
+|
+|MÜ bekreftes fõr man gÜr ut.
+|Alle data lagres, og hentes
+|inn igjen ved oppstart.
+@END
+
+;----------------------------------------------------------------
+; Hjelpetekster for Meny Programmering av kammer
+;----------------------------------------------------------------
+
+@HLP PrgKiln? MainHlp? |Programmering av Kammer|
+|Etter Ü trykket F9-tasten utfõres en beregning
+|av tõrkemodellen fõr du fÜr frem denne menyen:
+|
+|  @{ParChg? |Forandre parametre|}
+|  @{StartIt?|Start Kammeret|}
+@END
+
+@HLP ParChg? PrgKiln? |Forandre parametre|
+|GÜr tilbake til parameter innleggingen slik
+|at du kan endre modellen.  Hvis du ikke er
+|fornõyd med de data du har lagt inn, kan du
+|gÜ tilbake for Ü gjõre endringer.
+@END
+
+@HLP StartIt? PrgKiln? |Start Kammeret|
+|Dette menyvalget vil starte kammeret med den
+|tõrkemodellen du akkurat
+|har definert.
+@END
+
+;----------------------------------------------------------------
+; Hjelpetekster for Modell 3 parameterliste
+;----------------------------------------------------------------
+
+@HLP ParMod3? |Modell Parametre|
+|  Materiale: @{WoodSrt? |Treslag|}      @{Thick?   |Tykkelse|}
+|             @{Width?   |Bredde|}       @{Density? |Tetthet|}
+| Temperatur: @{TWET?    |t-vÜt|}
+|             @{TDS?     |Start.Diff.|}  @{TDC?     |Kond.diff.|}
+|  Fuktighet: @{SMoist?  |Start|}        @{EMoist?|Slutt|}
+|        Tid: @{EquTime? |Tining|}       @{CondTime?|Kondisjonering|}
+|             @{CoolTime?|Avkjõling|}
+|      Annet: @{Intens?  |Intensitet|}   @{Kernal? |Kjernevedandel|}
+@END
+
+@HLP WoodSrt? ParMod3? |Treslag|
+|Trykk F for Furu eller G for Gran.
+|Treslaget har ingen betydning for styringen,
+|men finnes for at du skal ha bedre oversikt
+|over hva du tõrker.
+@END
+
+@HLP Thick? ParMod3? |Material-Tykkelse|
+|Skriv inn Tykkelse.
+|Tillatt omrÜde : 12 - 150 mm
+@END
+
+@HLP Width? ParMod3? |Material-Bredde|
+|Skriv inn Bredde.
+|Tillatt omrÜde : 50 - 300 mm
+@END
+
+@HLP Density? ParMod3? |Material-Tetthet|
+|Oppgi trevirkets tetthet
+|
+|Tettheten er med pÜ Ü beskrive mengden av
+|vann i virket.
+|
+|Tettheten skal ligge fra 300 til 600 kg/m3
+@END
+
+@HLP EquTime? ParMod3? |Tinetid|
+|For tining av frosset virke.
+|
+|Skriv inn hvor lang tid kammeret skal "stÜ"
+|fra oppvarmingen er ferdig og til tõrke-
+|prosessen skal startes.
+|
+|Tillatt tid : 0 - 24 timer
+@END
+
+@HLP CondTime? ParMod3? |Kondisjonering|
+|Under kondisjonering utjevnes fuktigheten
+|i trevirket.  Dette reduserer faren for
+|sprekkdannelser og vridning.
+|
+|Tillatt tid : 0 - 72 timer
+@END
+
+@HLP CoolTime? ParMod3? |Avkjõling|
+|Under avkjõling reduseres virkets
+|temperatur ned mot omgivelsestemp.
+|Dette reduserer problemer med
+|riming o.l.
+|
+|Tillatt tid : 0 - 12 timer
+@END
+
+@HLP TDS? ParMod3? |Temp.diff.start|
+|Skriv inn õnsket start temperatur-differanse
+|under tõrketiden.
+|Jo stõrre temperatur-differanse, desto
+|hardere tõrking.  Se ogsÜ @{tWet?|vÜt-temperatur|}.
+|
+|Tillatt omrÜde : 0.0 - 2.5 @#248C
+@END
+
+@HLP TDC? ParMod3? |Temp.diff.kond|
+|Skriv inn õnsket temperaturdifferanse under
+|kondisjoneringstiden.
+|
+|Tillatt omrÜde : 1.0 - 20.0 @#248C
+@END
+
+@HLP tWet? ParMod3? |t-vÜt|
+|Skriv inn õnsket "vÜt" temperatur under
+|tõrkeprosessen.  Bestemmer sammen med
+|@{TDS?|temp.diff|} hvor hard tõrkingen blir.
+|
+|Tillatt omrÜde : 30.0 - 55.0 @#248C
+@END
+
+@HLP SMoist? ParMod3? |Startfuktighet|
+|Skriv inn hvilken fuktighet trevirket har
+|i utgangspunktet.
+|Tillatt omrÜde : 15 - 130 %
+@END
+
+@HLP EMoist? ParMod3? |Sluttfuktighet|
+|Skriv inn den õnskede fuktighet etter
+|fullfõrt tõrkeprosess.
+|Tillatt omrÜde : 6 - 25 %
+@END
+
+@HLP Intens? ParMod3? |Intensitet|
+|Skriv inn den õnskede tõrkeintensitetsfaktor
+|Jo hõyere faktor desto hardere tõrking og
+|kortere tõrketid.
+|
+|Tillatt omrÜde : 1.15 - 1.45
+@END
+
+@HLP Kernal? ParMod3? |Kjernevedandel|
+|Skriv inn antatt kjernevedandel
+|
+|Tillatt omrÜde : 0 - 100%
+@END
+
+@HLP HowStart? ParMod3? |Start beregningen av modellen|
+|NÜr du har gjort de endringene du õnsket i
+|parameterlisten vil du ved Ü trykke pÜ
+|F9-tasten, starte beregningen av modellen.
+|Etter at beregningen er fullfõrt (eller
+|avbrutt) vil du fÜ opp en meny med flere
+|valgmuligheter.
+@END
+
+;----------------------------------------------------------------
+; Hjelpetekster for EgenModell parameterliste
+;----------------------------------------------------------------
+
+@HLP ParMDC? MainHlp? |MDC Parametre|
+@END
+
+;@HLP  ParMDC? |Tresort|
+;|Trykk F for Furu eller G for Gran.
+;|Tretypen har ingen betydning for AGPRO,
+;|men finnes for at du skal ha bedre oversikt
+;|over hva du tõrker.
+;@END
+
+;@HLP  ParMDC? |Material-Tykkelse|
+;|Skriv inn Tykkelse.
+;|Tillatt omrÜde : 12 - 150 mm
+;@END
+
+;@HLP  ParMDC? |Material-Bredde|
+;|Skriv inn Bredde.
+;|Tillatt omrÜde : 50 - 300 mm
+;@END
+
+;@HLP  ParMDC? |Tinetid|
+;|For tining av frosset virke :
+;|Skriv inn hvor lang tid kammeret skal "stÜ"
+;|fra oppvarmingen er ferdig og til tõrke-
+;|prosessen skal startes.
+;|Tillatt omrÜde : 0 - 24 timer
+;@END
+
+@HLP DryTime? ParMDC? |Tõrketid|
+|Skriv inn Tõrketiden.
+|Tillatt omrÜde : 1 - 480 timer
+@END
+
+;@HLP  ParMDC? |Kondisjonering|
+;|Skriv inn Kondisjoneringstiden.
+;|Tillatt omrÜde : 0 - 72 timer
+;@END
+
+@HLP DataInt? ParMDC? |Data intervall|
+|Velg med hvilke mellomrom i tid du vil oppgi
+|punkter pÜ din egen tõrkemodell.
+|Tillatt omrÜde : 1 - (Tõrketid/2) timer
+@END
+
+;@HLP  ParMDC? |Temp.diff.kond|
+;|Skriv inn õnsket temperaturdifferanse
+;|under kondisjoneringstiden.
+;|Tillatt omrÜde : 1.0 - 20.0 @#248C
+;@END
+
+@HLP Distrib? ParMDC? |Fordelingsmetode|
+|Velg pÜ hvilken mÜte egenmodellen skal
+|"beregnes" (G/T).
+|G)lattet
+| Trekker en rett linje mellom punktene dine
+|T)rinnvis
+| p1 til p2 = p1, p2 til p3 = p2, ...osv.
+@END
+
+@HLP DryPoint? ParMDC? |Modellpunkt "Tõrr"-temperatur|
+|Tillatt omrÜde : 30.0 - 75.0 @#248C
+@END
+
+@HLP WetPoint? ParMDC? |Modellpunkt "VÜt"-temperatur|
+|Tillatt omrÜde : 30.0 - 50.0 @#248C
+@END
+
+@HLP F9? ParMDC? |Avslutt inntasting|
+|F9 tasten avslutter innlegging av parametre
+|og starter beregningen.
+@END
+
+;----------------------------------------------------------------
+; Hjelpetekster for Kanal parameterliste
+;----------------------------------------------------------------
+
+@HLP ParTNL? MainHlp? |Kanalparametre|
+|  Temperatur: @{WET-TEMP? |t-vÜt|}
+|              @{DRY-TEMP? |t-tõrr|}
+|              @{DeltaHeat?|delta t|}
+|  Oppv.tid  : @{HeatTime? |Oppvarmingstid|}
+|  Kommentar : @{MDLCMNT?  |Tekstfelt|}
+@END
+
+@HLP Wet-Temp? ParTNL? |Settpunkt|
+|VÜt temperatur settpunkt
+|
+| TvÜt = 30 - 75 ¯C
+@END
+
+@HLP Dry-Temp? ParTNL? |Settpunkt|
+|Tõrr temperatur settpunkt
+|
+| Ttõrr = 30 - 75 ¯C
+@END
+
+@HLP DELTAHEAT? ParTNL? |Grenseverdi|
+|Maksimal temperatur differanse
+|under oppvarming:
+|
+| ≥Ttõrr1-TvÜt1≥max =
+| delta t = 1 - 3 ¯C
+@END
+
+@HLP HEATTIME? ParTNL? |Oppvarmingstid|
+|Den tiden kanalen skal bruke
+|pÜ oppvarming etter innlasting
+|av nytt virke
+|
+| Oppvarmings tid = 0 - 240 min
+|                  (0 - 4 timer)
+@END
+
+@HLP MDLCMNT? ParTNL? |Kommentar|
+|Et kommentarfelt som kan brukes
+|fritt, f.eks. til Ü beskrive
+|hva som ligger i kanalen.
+|
+|Eks.
+|  Gran 150x50 mm
+|  Furu 120x70 mm
+@END
+
+;----------------------------------------------------------------
+; Hjelpetekster for Tid/Dato Endringer
+;----------------------------------------------------------------
+@HLP TimeSet? MainHlp? |Sett Tid og Dato|
+|Her kan du sette riktig dato og klokkeslett
+|for systemet hvis hva som vises ikke er riktig.
+|Tast inn õnsket dato / tid og trykk F9 tasten
+|for Ü akseptere de nye verdiene.
+|  @{SetHour?|Time|},@{SetMin?|Minutt|},@{SetDay?|Dag|},@{SetMnth?|MÜned|},@{SetYear?|èr|}
+@END
+
+@HLP SetYear? TimeSet? |èrstall|
+|Skriv inn Ürstall (4 siffer).
+|Tillatt omrÜde : 1988 - 2049
+@END
+
+@HLP SetMnth? TimeSet? |MÜned|
+|Skriv inn mÜned (1..2 siffer).
+|Det er naturligvis 12 mÜneder i et Ür.
+@END
+
+@HLP SetDay? TimeSet? |Dag|
+|Skriv inn dag (1..2 siffer).
+|Tillatt omrÜde : 1 - 31
+@END
+
+@HLP SetHour? TimeSet? |Time|
+|Skriv inn time (24 timers ur  1..2 siffer).
+|Tillatt omrÜde : 0 - 23
+@END
+
+@HLP SetMin? TimeSet? |Minutt|
+|Skriv inn minutt (1..2 siffer).
+|Tillatt omrÜde : 0 - 59
+@END
+
+;----------------------------------------------------------------
+; Hjelpetekster for konfigurasjon
+;----------------------------------------------------------------
+
+@HLP CfgHlp? MainHlp? |Installerbare parametre|
+| @{CFGUNITS?|Antall enheter|} installert
+| @{LANGUAGE?|TekstsprÜk|} pÜ skjermbilder
+| Tid fõr automatisk @{BLANKINT?|Skjermblanking|}
+| Tid mellom hver @{BAKUPINT?|Sikkerhetskopi|}
+| @{PLCSLCT?|Pls-modell|}
+| @{PLCLnk?|PLS|} tilkopling
+| @{ModemLnk?|Modem|} tilkopling
+@END
+
+@HLP CfgUnits? CfgHlp? |Installerte enheter|
+|Kan ikke endres i dette programmet, men
+|bestemmes ved fõrstegangs installasjon
+|av styringssystemet
+@END
+
+@HLP KilnName? CfgHlp? |Tõrke-navn|
+|Oppgi navn pÜ tõrken:
+|
+|F.eks.
+|        Kanal 1
+|        Kammer 3
+|        etc.
+@END
+
+@HLP Zone#? CfgHlp? |Antall soner|
+|Oppgi hvor mange soner kanalen
+|er delt inn i:
+|
+|Fra en til tre soner, normalt to.
+|
+|Dette valget har ingen effekt i
+|denne versjon av programmet.
+@END
+
+@HLP USERANK? CfgHlp? |Bruk rankeliste|
+|Skal rankeliste brukes ?
+|Rankelisten er en materialflyt oversikt
+@END
+
+@HLP MAXERANK? CfgHlp? |Ant. venteranker|
+|Antall ranker pÜ matesiden av tunnelen
+|Fra null til ti ranker tillatt
+@END
+
+@HLP MAXTRANK? CfgHlp? |Ant. tunnellranker|
+|Antall ranker inne i tunnelen
+|Fra null til femti ranker tillatt
+@END
+
+@HLP MAXXRANK? CfgHlp? |Ant. ferdigranker|
+|Antall ranker ved utgang av tunnelen
+|Fra null til ti ranker tillatt
+@END
+
+@HLP Language? CfgHlp? |SprÜk|
+|Velg hvilket sprÜk, menyer og
+|andre tekster skal benytte.
+|
+|Dette valget har ingen effekt i
+|denne versjon av programmet.
+@END
+
+@HELP BlankInt? CfgHlp? |Skjermblanking|
+|Tid i minutter fõr automatisk 
+|skjermblanking trer i kraft
+@END
+
+@HELP BakupInt? CfgHlp? |Backup intervall|
+|Tid i minutter mellom hver backup
+@END
+
+@HLP PRNTTYPE? CFGHLP? |Skrivertype|
+|0 - IBM Graphics komp.
+|1 - Epson FX kompatibel 
+@END
+
+@HLP SerIns? CfgHlp? |Serieport|
+|
+|Installert : Ja/Nei
+| Port COMx : COM1/COM2
+| Hastighet : 300..19200 bps
+|  Stoppbit : 1/2
+|   Paritet : None/Even/Odd
+|
+|Se @{PLCLNK?|PLS port|} og @{MODEMLNK?|Modem port|}
+@END
+
+@HLP PLCLNK? SerIns? |PLS port|
+|Seriellporten mot PLS tillater
+|PC'en Ü kommunisere med PLS'en
+@END
+
+@HLP PLCSLCT? CfgHlp? |PLS Type|
+| Gould Modicon 484 og 884
+|  (RTU-mode)
+| Mitsubishi Melsec F1 og F2
+| Klîckner-Moeller IPC 620-12/14/16
+|  (Modbus RTU protokoll)
+| Sattcon og Telemechanique PLS'er
+@END
+
+@HLP MODEMLNK? SerIns? |Modem port|
+|Seriell port mot modem tillater
+|fjernoppkopling mot programmet
+|
+|Ikke implementert i denne versjon
+@END
+
+@HLP LANAVAIL? CFGHLP?
+|Er lokalnett installert ?
+|Stõtter alle NetBIOS kompatible
+|nettverk.
+|
+|Ikke implementert i denne versjon
+@END
+
+@HLP LANREMOTE? CFGHLP? |LAN fjernstyring|
+|Skal tõrka kunne fjernstyres
+|via lokalnett ?
+|
+|Ikke implementert i denne versjon
+@END
+
+@HLP LANADDR? CFGHLP? |LAN adresse|
+|Oppgi 16 tegns nodenavn for
+|adressering i nettverket
+|
+|Ikke implementert i denne versjon
+@END
+
+@HLP ENTNAME? CFGHLP? |Funksjon|
+|Tekst som beskriver coilens
+|eller registerets funksjon.
+|Har ingen betydning for den
+|virkelige funksjonen.
+@END
+
+@HLP ENTADR? CFGHLP? |Adresse|
+|Register eller Coil adresse.
+|Ansvaret for Ü gi riktige
+|adresser hviler pÜ operatõren.
+@END
+
+@HLP ENTAVAIL? CFGHLP? |Tilgjengelig ?|
+|Er registeret/coilen tilgjengelig
+|for bruk ?  (Installert ?)
+@END
+
+@HLP ENTLOGGED? CFGHLP? |Logging ?|
+|Skal verdiene logges ?
+|
+|Det har pr. i dag ingen hensikt Ü
+|endre dette valget.
+|Bõr derfor fÜ stÜ urõrt.
+@END
+
+;----------------------------------------------------------------
+; Hjelpetekster for Kammeroversikten
+;----------------------------------------------------------------
+@HLP GenHelp? MainHlp? |Kammeroversikt|
+|
+|
+@END
+
+@STOP
+
